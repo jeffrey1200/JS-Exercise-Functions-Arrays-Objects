@@ -234,7 +234,7 @@ function sortCarInventory(inventory) {
 
   // })
 
-  // return inventory
+   return inventory
 
 
     // const container = Object.
@@ -291,7 +291,7 @@ function getOlderCars(inv,maxYear) {
   // }
   let olderCars = [];
   for (let i=0; i < inv.length; i++) { // so creating a variable to loop through the length of the array
-      if (inv[i].car_year < maxYear) {// inv[i].car_year means that it is targeting the parameter of the function which is indexed based on i conditions
+      if (inv[i].car_year <= maxYear) {// inv[i].car_year means that it is targeting the parameter of the function which is indexed based on i conditions
           olderCars.push(inv[i]);// so selecting car_year property inside the array of objects < the amount of years someone would pass as an argument.
       }// And finally it is pushing into our empty array the desired year that someone would call in the function?
   }
@@ -322,7 +322,7 @@ function getOlderCars(inv,maxYear) {
 function getGermanCars(germanCars) {
   const gCars = [];
   for( let i =0; i < germanCars.length; i++){
-    if(germanCars[i].car_make === 'Audi' || 'Mercedes-Benz' || 'Volkswagen' || 'BMW'){
+    if(germanCars[i].car_make === 'Audi' || germanCars[i].car_make ===  'Mercedes-Benz' ||germanCars[i].car_make ===  'Volkswagen' ||germanCars[i].car_make ===  'BMW'){
       gCars.push(germanCars[i]);
     }
   }
